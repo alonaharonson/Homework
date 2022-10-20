@@ -12,34 +12,35 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            shela5();
+            shela1();
         }
         public static void shela1()
         {
-            int sales, sum = 0,sumtotal=0;
+            int sales,sumtotal=0;
             string name;
             int counter = 0;//סופר כמה מכירות היו 
             int sold = 0;//כמה היו בכללי
             Console.WriteLine("hello, whats your name?");
             name = Console.ReadLine();
-            if (name != "")
+            while (name != "")
             {
-                
                 sold++;
-                for (int i = 1; i <= 30; i++)             
+                int sum = 0;
+                for (int i = 1; i <= 3; i++)             
                 {
                     Console.WriteLine("how much money you made today?");
                     sales = int.Parse(Console.ReadLine());
                     sum = sum + sales;
-                   
+                    
                 }
                 sumtotal = sumtotal + sum;
                 Console.WriteLine("hello " + name + " your sales is " + sum);
-                Console.WriteLine("your avg of the all month " + sum / 30.0);
-                Console.WriteLine("avg: " + (double)sumtotal / sold);
-                shela1();
+                Console.WriteLine("your avg of the all month " + sum / 3.0);
+                Console.WriteLine("hello, whats your name?");
+                name = Console.ReadLine();
+                /*shela1();*/
             }
-            
+            Console.WriteLine("avg: " + (double)sumtotal / sold);
 
 
 
@@ -72,7 +73,7 @@ namespace ConsoleApp4
                                  
                 }
                 
-                for (int i = n; i >= 0; i--)
+                for (int i = n; i > 0; i--)
                 {
                     string str2 = "";
                     for (int j = 1; j < i ; j++)
